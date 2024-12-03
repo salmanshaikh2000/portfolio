@@ -3,10 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document should work</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>hello</div>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#contact-me">Contact Me</a></li>
+                <li><a href="#gallery">My Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to My Personal Website</h1>
+    </section>
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hi, I'm [Your Name]. This is my personal website.</p>
+    </section>
+
+    <section id="contact-me">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="acknowledgement" style="display:none;">Thank you! Your message has been sent.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>My Gallery</h2>
+        <div class="gallery-grid">
+            <img src="image1.jpg" alt="Photo 1">
+            <img src="image2.jpg" alt="Photo 2">
+            <img src="image3.jpg" alt="Photo 3">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Personal Website</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('acknowledgement').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
